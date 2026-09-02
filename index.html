@@ -11,13 +11,18 @@
   body{background:#FAF8F3}
   a{color:#141414}
   a:hover{color:#1F4FE0}
-  .pulse-line{animation:linePulse 3.6s ease-in-out infinite;animation-delay:calc(var(--i) * 90ms)}
+  .pulse-line{animation:linePulse 7.2s ease-in-out infinite;animation-delay:calc(var(--i) * 90ms)}
   @keyframes linePulse{
     0%,100%{opacity:var(--o)}
-    50%{opacity:calc(var(--o) * 1.8)}
+    50%{opacity:calc(var(--o) * 1.35)}
   }
   @media (prefers-reduced-motion: reduce){
     .pulse-line{animation:none}
+  }
+  .email-mobile{display:none}
+  @media (max-width:640px){
+    .email-desktop{display:none}
+    .email-mobile{display:block}
   }
 </style>
 </head>
@@ -76,9 +81,10 @@
           <p style="font-size:9px;letter-spacing:1.5px;color:#6E6C5E;margin:0 0 5px;text-transform:uppercase">Master fund</p>
           <p style="font-size:11px;line-height:1.65;color:#6E6C5E;margin:0">MPP&amp;E Everest Flagship Master Fund Limited<br>Mandar House, 3rd Floor, Johnson's Ghut<br>PO Box 2196, Road Town, Tortola, VG1110, BVI</p>
         </div>
-        <p style="font-size:11px;color:#6E6C5E;margin:0"><a href="mailto:ir@26apex.com" style="color:#6E6C5E;text-decoration:underline;text-underline-offset:3px">ir@26apex.com</a></p>
+        <p class="email-mobile" style="font-size:11px;color:#6E6C5E;margin:0"><a href="mailto:ir@26apex.com" style="color:#6E6C5E;text-decoration:underline;text-underline-offset:3px">ir@26apex.com</a></p>
       </div>
-      <div style="text-align:right">
+      <div style="text-align:right;display:flex;flex-direction:column;gap:8px;align-items:flex-end">
+        <p class="email-desktop" style="font-size:11px;color:#6E6C5E;margin:0"><a href="mailto:ir@26apex.com" style="color:#6E6C5E;text-decoration:underline;text-underline-offset:3px">ir@26apex.com</a></p>
         <p style="font-size:9px;letter-spacing:0.4px;color:#6E6C5E;margin:0">A higher-risk strategy. Capital is not guaranteed.</p>
       </div>
     </div>
